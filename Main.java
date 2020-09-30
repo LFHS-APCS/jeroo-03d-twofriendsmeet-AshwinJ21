@@ -21,7 +21,24 @@ public class Main implements Directions {
     public void runJerooCode() {
         Jeroo bugs = new Jeroo(0,  0, EAST, 90);
         Jeroo daffy = new Jeroo(0, 23, WEST, 90);
- 
+        bugs.plant();
+        daffy.plant();
+        while(bugs.isClear(AHEAD)){
+          bugs.hopPlant();
+          daffy.hopPlant();
+        }
+        bugs.turn(RIGHT);
+        daffy.turn(LEFT);
+        while(bugs.isClear(AHEAD)){
+          bugs.hopPlant();
+          daffy.hopPlant();
+        }
+        bugs.turn(RIGHT);
+        daffy.turn(LEFT);
+        while(bugs.isClear(AHEAD)){
+          bugs.hopPlant();
+          daffy.hopPlant();
+        }
     }
 
 }
