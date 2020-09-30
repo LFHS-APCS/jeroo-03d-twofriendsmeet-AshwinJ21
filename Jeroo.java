@@ -4,7 +4,10 @@
  */
 public class Jeroo extends JerooBase {
     // Put any optional helper methods here
-
+    public void hopPlant(){
+      hop();
+      plant();
+    }
     
     // Do NOT touch the code below here
     public Jeroo() {super();}
